@@ -8,13 +8,10 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject vitoriaText;
 
-    // Update is called once per frame
+    public GameObject derrotaText;
+
     void Update()
     {
         var v = Input.GetAxis("Vertical") * moveSpeed;
@@ -27,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Vitoria"))
         {
-            Debug.Log("Jogador entrou na área de vitória!");
+            vitoriaText.SetActive(true);
         }
     }
 }
