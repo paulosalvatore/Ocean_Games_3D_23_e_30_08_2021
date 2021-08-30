@@ -22,4 +22,12 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector3(h, rb.velocity.y, v);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Vitoria"))
+        {
+            Debug.Log("Jogador entrou na área de vitória!");
+        }
+    }
 }
